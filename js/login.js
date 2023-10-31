@@ -1,12 +1,12 @@
 
 var loginForm = document.getElementById('loginForm');
 
-if (loginForm) {
+
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        var email = document.getElementById('loginEmail').value;
-        var password = document.getElementById('loginPassword').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
         
         fetch('http://localhost:3000/users?email=' + email + '&password=' + password)
         .then(response => response.json())
@@ -22,10 +22,5 @@ if (loginForm) {
         })
         .catch(error => console.error(error));
     });
-}
+
     
-function logout() {
-    sessionStorage.removeItem('email');
-    console.log('User logged out');
-    window.location.href = 'login.html';
-}
