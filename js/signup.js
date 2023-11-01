@@ -10,6 +10,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         return; 
     }
    
+  //TODO: password req
     fetch('http://localhost:3000/users', {
       method: 'POST',
       headers: {

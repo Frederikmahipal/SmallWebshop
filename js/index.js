@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     var email = sessionStorage.getItem('email');
     if (!email) {
         alert('access denied, please login')
@@ -11,4 +11,3 @@ function logout() {
     console.log('User logged out');
     window.location.href = 'login.html';
 }
-
