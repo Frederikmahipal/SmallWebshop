@@ -4,8 +4,13 @@ document.getElementById('signupForm').addEventListener('submit', async function(
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   var confirmPassword = document.getElementById('confirmPassword').value;
-
+  var emailRegex = / ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+
+  if (!emailRegex.test(email)) {
+    alert('Enter a valid email adress');
+    return;
+  }
 
   if (password !== confirmPassword) {
       alert('Passwords do not match');
@@ -17,6 +22,7 @@ document.getElementById('signupForm').addEventListener('submit', async function(
       return;
   }
 
+  
   try {
       let response = await fetch('http://localhost:3000/users?email=' + email);
       let data = await response.json();
