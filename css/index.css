@@ -1,0 +1,53 @@
+.button_container {
+  display: flex;
+  margin-top: 21px;
+  width: 333px;
+  max-width: 100%;
+  gap: 11px;
+}
+
+#cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+#cta #text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+#cta #text p {
+  color: var(--Text-Secondary, #979797);
+  text-align: center;
+  max-width: 610px;
+  font: 20px Inter, Helvetica, sans-serif;
+}
+#cta #text h1 {
+  color: var(--Text-Primary, #000);
+  text-align: center;
+  max-width: 755px;
+  font: 600 56px Inter, Helvetica, sans-serif;
+}
+
+#pictures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+#pictures img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.img_column {
+  height: 100%;
+  width: 33%;
+}
