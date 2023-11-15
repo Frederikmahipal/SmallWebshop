@@ -14,12 +14,16 @@ async function displayProducts(category) {
 
   products.forEach((product) => {
     const productElement = document.createElement("div");
+    productElement.classList.add("product-card");
     productElement.innerHTML = `
-                <h2>${product.title}</h2>
-                <p>${product.description}</p>
-                <p>${product.price}</p>
-                <img src="${product.image}" alt="${product.title}"/>
-                <button>Add to cart</button>
+                <div class="product-img"><img src="${product.image}" alt="${product.title}"/></div>
+                <div class="product-info">
+                  <div class="title-price">
+                    <h2>${product.title}</h2>
+                    <p>$${product.price}</p>
+                  </div>
+                  <button>Add to cart</button>
+                </div>
             `;
 
     productElement.querySelector("button").addEventListener("click", () => {
@@ -32,11 +36,15 @@ async function displayProducts(category) {
 
 displayProducts();
 
-const categorySelect = document.getElementById("categorySelect");
+const categorySelect = document.querySelector(".categorySelect");
 if (categorySelect) {
-  document.getElementById("categorySelect").addEventListener("change", function () {
-    const category = this.value;
-    displayProducts(category);
+  categorySelect.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      categorySelect.querySelector(".active")?.classList.remove("active");
+      button.classList.add("active");
+      const category = button.value;
+      displayProducts(category);
+    });
   });
 }
 

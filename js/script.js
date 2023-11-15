@@ -2,7 +2,11 @@
 function updateCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartTotal = document.querySelector(".cartTotal");
-  cartTotal.textContent = cart.reduce((total, product) => total + product.quantity, "");
+  if (cart.length > 0) {
+  cartTotal.textContent = cart.reduce((total, product) => total + product.quantity, 0);
+  } else {
+    cartTotal.textContent = "";
+  }
 }
 
 function addToCart(product) {

@@ -12,7 +12,7 @@ loginForm.addEventListener('submit', async function(event) {
         if (data.length > 0) {
             sessionStorage.setItem('email', email);
             console.log('User logged in');
-            window.location.href = 'index.html';
+            window.location.href = '';
         } else {
             console.log('Invalid credentials');
             alert('invalid credentials')
