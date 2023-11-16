@@ -38,84 +38,99 @@
       </nav>
     </header>
     <main>
-      <section id="address">
-        <div>
-          <h1>Checkout</h1>
-          <form class="address">
-            <div class="form-group">
-              <input
-                aria-label="First Name"
-                placeholder="First Name"
-                type="text"
-                id="first-name"
-                name="first-name"
-                required
-              />
+      <section id="checkout">
+        <div class="checkout-grid">
+          <div>
+            <div class="title-grid">
+              <h1>Checkout</h1>
+              <div class="progress">
+                <h2 class="address-text">Address</h2>
+                <hr class="progress-line" />
+                <p class="address-text">Payment</p>
+              </div>
             </div>
-            <div class="form-group">
-              <input
-                aria-label="Last Name"
-                placeholder="Last Name"
-                type="text"
-                id="last-name"
-                name="last-name"
-                required
-              />
+            <div>
+              <h3>Shipping Information</h3>
+              <form class="address">
+                <div class="form-group">
+                  <input
+                    aria-label="First Name"
+                    placeholder="First Name"
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    aria-label="Last Name"
+                    placeholder="Last Name"
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    aria-label="Address"
+                    placeholder="Address"
+                    type="text"
+                    id="address"
+                    name="address"
+                    required
+                  />
+                </div>
+                <div class="form-group3">
+                  <input
+                    aria-label="Apartment, suite, etc."
+                    placeholder="Apartment, suite, etc."
+                    type="text"
+                    id="address-2"
+                    name="address-2"
+                  />
+                  <input
+                    aria-label="City"
+                    placeholder="City"
+                    type="text"
+                    id="city"
+                    name="city"
+                    required
+                  />
+                </div>
+                <div class="form-group3">
+                  <input
+                    aria-label="Zipcode"
+                    placeholder="Zipcode"
+                    type="text"
+                    id="zipcode"
+                    name="zipcode"
+                    required
+                  />
+                  <select aria-label="country" id="country" name="country">
+                    <option value="">Country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="dk">Denmark</option>
+                    <option value="se">Sweden</option>
+                  </select>
+                </div>
+                <div class="checkbox-group">
+                  <input type="checkbox" id="save-info" name="save-info" />
+                  <label for="save-info">Save contact information</label>
+                </div>
+                <button type="submit" class="button">
+                  Continue to shipping
+                </button>
+              </form>
             </div>
-            <div class="form-group">
-              <input
-                aria-label="Address"
-                placeholder="Address"
-                type="text"
-                id="address"
-                name="address"
-                required
-              />
-            </div>
-            <div class="form-group3">
-              <input
-                aria-label="Apartment, suite, etc."
-                placeholder="Apartment, suite, etc."
-                type="text"
-                id="address-2"
-                name="address-2"
-              />
-              <input
-                aria-label="City"
-                placeholder="City"
-                type="text"
-                id="city"
-                name="city"
-                required
-              />
-            </div>
-            <div class="form-group3">
-              <input
-                aria-label="Zipcode"
-                placeholder="Zipcode"
-                type="text"
-                id="zipcode"
-                name="zipcode"
-                required
-              />
-              <select aria-label="country" id="country" name="country">
-                <option value="">Country</option>
-                <option value="us">United States</option>
-                <option value="ca">Canada</option>
-                <option value="uk">United Kingdom</option>
-                <option value="dk">Denmark</option>
-                <option value="se">Sweden</option>
-              </select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" id="save-info" name="save-info" />
-              <label for="save-info">Save contact information</label>
-            </div>
-            <button type="submit" class="button">Continue to shipping</button>
-          </form>
+          </div>
+
+          <div>hej</div>
         </div>
       </section>
-      <section id="checkout_cart"></section>
     </main>
   </body>
 </html>
