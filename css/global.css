@@ -281,6 +281,10 @@ p {
   gap: 0.5rem
 }
 
+.removeButton {
+  user-select: none;
+}
+
 .cart-item .product-info .removeButton, .cart-content a {
     text-decoration: underline;
     cursor: pointer;
