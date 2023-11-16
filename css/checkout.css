@@ -1,13 +1,17 @@
 main {
   padding: 4rem 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
   gap: 2rem;
 }
 .address {
+  grid-column: 2;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+#checkout_cart {
+  grid-column: 3;
 }
 
 .address h1 {
@@ -18,7 +22,6 @@ main {
 .address input,
 .address select {
   color: var(--primary);
-
   border: 0.5px solid #000;
   align-items: start;
   padding: 15px 16px;
@@ -40,4 +43,23 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 0;
+  accent-color: var(--accent);
+}
+
+.checkbox-group label {
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
 }
