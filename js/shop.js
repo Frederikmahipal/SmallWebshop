@@ -39,10 +39,10 @@ async function displayProducts(category) {
   });
 }
 
-let email = sessionStorage.getItem("email");
 if (email) {
   displayProducts();
 }
+
 const categorySelect = document.querySelector(".categorySelect");
 if (categorySelect) {
   categorySelect.querySelectorAll("button").forEach((button) => {
@@ -54,37 +54,3 @@ if (categorySelect) {
     });
   });
 }
-
-// function displayCart() {
-//   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-//   const cartContainer = document.getElementById("cartContainer");
-//   cartContainer.innerHTML = "";
-//   cart.forEach((product) => {
-//     const productElement = document.createElement("div");
-//     productElement.innerHTML = `
-//                 <h2>${product.title}</h2>
-//                 <p>${product.price}</p>
-//                 <img src="${product.image}" alt="${product.title}"/>
-//                 <button class="removeButton">Remove</button>
-//                 <button class="addButton">Add to cart</button>
-//                 <p>Quantity: ${product.quantity}</p>
-//             `;
-//     productElement.querySelector(".removeButton").addEventListener("click", () => {
-//       removeProduct(product);
-//     });
-//     productElement.querySelector(".addButton").addEventListener("click", () => {
-//       addToCart(product);
-//     });
-//     cartContainer.appendChild(productElement);
-//   });
-
-//   const cartTotal = document.querySelector(".cartTotal");
-//   cartTotal.textContent = cart.reduce((total, product) => total + product.quantity, 0);
-
-//   //if cart has no items, display a message
-//     if (cart.length === 0) {
-//         const emptyCartMessage = document.createElement("p");
-//         emptyCartMessage.textContent = "Your cart is empty";
-//         cartContainer.appendChild(emptyCartMessage);
-//     }
-// }

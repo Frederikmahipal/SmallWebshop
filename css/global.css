@@ -170,3 +170,11 @@ p {
 .accordion:has(input:checked) .content {
   display: block;
 }
+
+.logout {
+  cursor: pointer;
+  font-size: inherit;
+  border: none;
+  background: none;
+  color: inherit;
+}

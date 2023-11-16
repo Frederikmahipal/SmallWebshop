@@ -2,8 +2,9 @@
 function updateCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartTotal = document.querySelector(".cartTotal");
+  if (!cartTotal) return;
   if (cart.length > 0) {
-  cartTotal.textContent = cart.reduce((total, product) => total + product.quantity, 0);
+    cartTotal.textContent = cart.reduce((total, product) => total + product.quantity, 0);
   } else {
     cartTotal.textContent = "";
   }
@@ -65,14 +66,22 @@ function checkout() {
 
 function logout() {
   sessionStorage.removeItem("email");
-  console.log("User logged out");
-  window.location.href = "login.html";
+  location.reload();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log(window.location.href);
-  let email = sessionStorage.getItem("email");
-  if (!email && window.location.href.includes("shop")) {
-    window.location.href = "login.html";
-  }
-});
+const email = sessionStorage.getItem("email");
+const loginBtn = document.querySelector(".login");
+const logoutBtn = document.querySelector(".logout");
+if (email) {
+  loginBtn?.classList.add("hidden");
+  logoutBtn?.classList.remove("hidden");
+  logoutBtn?.addEventListener("click", () => {
+    logout();
+  });
+} else {
+  loginBtn?.classList.remove("hidden");
+  logoutBtn?.classList.add("hidden");
+}
+if (!email && window.location.href.includes("shop")) {
+  window.location.href = "login.html";
+}
