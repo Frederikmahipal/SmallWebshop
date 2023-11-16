@@ -1,0 +1,26 @@
+main {
+  padding: 4rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.address h1 {
+  color: #a54e70;
+  font: 600 22px/30px Inter, Helvetica, sans-serif;
+}
+
+.address input,
+.address select {
+  color: var(--colors-grey-grey-2, #a9abbd);
+  border: 0.5px solid #000;
+  align-items: start;
+  padding: 15px 16px;
+  font: 400 16px Inter, Helvetica, sans-serif;
+  width: 100%;
+}
