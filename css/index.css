@@ -1,3 +1,9 @@
+main {
+  max-width: 1200px;
+  padding: 3rem 1rem;
+  margin: 0 auto;
+}
+
 .button_container {
   display: flex;
   justify-content: center;
@@ -54,4 +60,14 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #pictures {
+    flex-direction: column;
+  }
+
+  #pictures #c2 {
+    padding-bottom: 0rem;
+  }
 }

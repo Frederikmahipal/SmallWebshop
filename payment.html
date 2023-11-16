@@ -44,7 +44,7 @@
             <div class="title-grid">
               <h1>Checkout</h1>
               <div class="progress">
-                <p class="address-text">Address</p>
+                <a href="checkout.html" class="address-text">Address</a>
                 <hr class="progress-line" />
                 <h2 class="address-text">Payment</h2>
               </div>
@@ -118,6 +118,8 @@
                     type="text"
                     id="CVC"
                     name="CVC"
+                    pattern="\d{3}"
+                    title="CVC should be 3  digits long."
                     required
                   />
                 </div>
