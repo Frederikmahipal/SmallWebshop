@@ -1,0 +1,61 @@
+main {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.loginsignform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.signupsection {
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--colors-grey-white, #fff);
+  width: 33%;
+  padding: 37px 28px 28px 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signupsection h1 {
+  color: #a54e70;
+  font: 600 22px/30px Inter, Helvetica, sans-serif;
+}
+
+.signupsection .signuptext {
+  color: var(--colors-grey-grey-2, #a9abbd);
+  font: 500 16px/26px Inter, Helvetica, sans-serif;
+}
+
+.signupsection input {
+  color: var(--colors-grey-grey-2, #a9abbd);
+  border: 0.5px solid #000;
+  align-items: start;
+  padding: 15px 16px;
+  font: 400 16px Inter, Helvetica, sans-serif;
+}
+
+.termstxt {
+  color: var(--Secondary, #979797);
+  margin-top: 0.5rem;
+  font: 300 10px Inter, Helvetica, sans-serif;
+}
+
+.createbutton {
+  color: #a54e70;
+  align-self: center;
+  margin-top: 31px;
+  white-space: nowrap;
+  font: 500 14px/21px Inter, Poppins, sans-serif;
+}
+
+.loginsection {
+  color: #a54e70;
+  align-self: center;
+  white-space: nowrap;
+  font: 500 21px Inter, Poppins, sans-serif;
+}
