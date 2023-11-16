@@ -2,12 +2,17 @@ async function displayProducts(category) {
   let products;
 
   const productGrid = document.querySelector(".product-grid");
-  productGrid.innerHTML = "loading products...";
+  productGrid.innerHTML = "Loading products...";
 
   if (category) {
     products = await getProductsByCategory(category);
   } else {
     products = await getAllProducts();
+  }
+
+  if (!products) {
+    productGrid.innerHTML = "Error loading products";
+    return;
   }
 
   productGrid.innerHTML = "";
