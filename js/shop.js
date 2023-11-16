@@ -27,13 +27,8 @@ async function displayProducts(category) {
                     <h2>${product.title}</h2>
                     <p>$${product.price}</p>
                   </div>
-                  <button class="button button_add-to-cart button_secondary">Add to cart</button>
                 </div>
             `;
-
-    productElement.querySelector("button").addEventListener("click", () => {
-      addToCart(product);
-    });
 
     productElement.addEventListener("click", () => {
       console.log(product);
@@ -65,8 +60,14 @@ async function displayProducts(category) {
       `;
       modal.setAttribute("open", "");
 
-      modal.querySelector(".button").addEventListener("click", () => {
+      modal.querySelector(".button").addEventListener("click", (e) => {
         addToCart(product);
+        e.target.textContent = "Added to cart";
+        e.target.disabled = true;
+        setTimeout(() => {
+          e.target.textContent = "Add to cart";
+          e.target.disabled = false;
+        }, 500);
       });
       modal.querySelector(".close-button").addEventListener("click", () => {
         modal.removeAttribute("open");
