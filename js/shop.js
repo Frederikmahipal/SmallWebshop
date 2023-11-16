@@ -35,6 +35,26 @@ async function displayProducts(category) {
       addToCart(product);
     });
 
+    productElement.addEventListener("click", () => {
+      console.log(product);
+      const modal = document.querySelector(".product-modal");
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-img"><img src="${product.image}" alt="${product.title}"/></div>
+          <div class="modal-info">
+            <h2>${product.title}</h2>
+            <p>${product.description}</p>
+            <p>$${product.price}</p>
+            <button>Add to cart</button>
+          </div>
+        </div>
+      `;
+      modal.setAttribute("open", "");
+      modal.addEventListener("click", () => {
+        modal.removeAttribute("open");
+      });
+    });
+
     productGrid.appendChild(productElement);
   });
 }
