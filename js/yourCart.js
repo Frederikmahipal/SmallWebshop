@@ -31,7 +31,6 @@ function renderCart() {
     productElement.innerHTML = `
                 <div class="product-img"><img src="${product.image}" alt="${product.title}"/></div>
                 <div class="product-info">
-                  
                     <h2>${product.title}</h2>
                     <p>Quantity: ${product.quantity}</p>
                     <span class="removeButton">Remove</span>

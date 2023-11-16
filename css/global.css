@@ -26,6 +26,7 @@ header {
   padding: 1rem;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 header[transparent] {
@@ -117,15 +118,59 @@ p {
 .product-modal {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(5px);
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
+  background: var(--background);
+  z-index: 1;
   display: none;
+  padding-top: 60px;
+}
+
+.product-modal .modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.product-modal .modal-content .modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-modal .modal-content .modal-info .price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.price-rating .price {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.price-rating .rating {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.product-modal .close-button {
+  background: none;
+  grid-column: 1/-1;
+  border: none;
+  justify-self: end;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .product-modal[open] {
-  display: flex;
+  display: block;
 }
 
 .button {
@@ -137,15 +182,21 @@ p {
   font-size: 1rem;
   font-weight: 900;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
-.button_seccondary {
+.button_secondary {
   border: 2px solid var(--accent);
   color: var(--accent);
   background: none;
 }
 
-.button:hover, .button_seccondary:hover {
+.button_add-to-cart {
+  padding: .5rem 2rem;
+  width: 100%;
+}
+
+.button:hover, .button_secondary:hover {
   background-color: var(--accent-light);
   border: 2px solid transparent;
   color: var(--white);
