@@ -115,6 +115,7 @@ p {
 
 .button_main {
   color: #f5f5f5;
+  border: none;
   text-align: center;
   white-space: nowrap;
   background-color: var(--Mrk-pink, #a54e70);
@@ -122,6 +123,9 @@ p {
   align-items: center;
   padding: 16px 20px;
   font: 800 22px Public Sans, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.button_main:hover {
+  background-color: var(--Mrk-pink, #d192ad);
 }
 
 .button_seccondary {

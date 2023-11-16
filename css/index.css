@@ -34,20 +34,21 @@
 }
 
 #pictures {
+  padding: 6rem 2rem 2rem 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding-top: 3rem;
+  gap: 2rem;
 }
 
-#pictures img {
+#pictures .img_column {
+  flex: 33.33%;
+}
+#pictures #c2 {
+  padding-bottom: 10rem;
+}
+
+#pictures .img_column img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-.img_column {
-  height: 100%;
-  width: 33%;
+  height: 500px;
+  object-fit: cover;
 }
