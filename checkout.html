@@ -71,16 +71,14 @@
                 required
               />
             </div>
-            <div class="form-group">
+            <div class="form-group3">
               <input
-                aria-label="Apartment, suite, etc (optional)"
-                placeholder="Apartment, suite, etc (optional)"
+                aria-label="Apartment, suite, etc."
+                placeholder="Apartment, suite, etc."
                 type="text"
                 id="address-2"
                 name="address-2"
               />
-            </div>
-            <div class="form-group">
               <input
                 aria-label="City"
                 placeholder="City"
@@ -90,7 +88,15 @@
                 required
               />
             </div>
-            <div class="form-group">
+            <div class="form-group3">
+              <input
+                aria-label="Zipcode"
+                placeholder="Zipcode"
+                type="text"
+                id="zipcode"
+                name="zipcode"
+                required
+              />
               <select aria-label="country" id="country" name="country">
                 <option value="">Country</option>
                 <option value="us">United States</option>
@@ -100,23 +106,11 @@
                 <option value="se">Sweden</option>
               </select>
             </div>
-            <div class="form-group">
-              <input
-                aria-label="Zipcode"
-                placeholder="Zipcode"
-                type="text"
-                id="zipcode"
-                name="zipcode"
-                required
-              />
-            </div>
             <div class="checkbox-group">
               <input type="checkbox" id="save-info" name="save-info" />
               <label for="save-info">Save contact information</label>
             </div>
-            <button type="submit" class="button_main">
-              Continue to shipping
-            </button>
+            <button type="submit" class="button">Continue to shipping</button>
           </form>
         </div>
       </section>
