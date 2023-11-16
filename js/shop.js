@@ -39,8 +39,10 @@ async function displayProducts(category) {
   });
 }
 
-displayProducts();
-
+let email = sessionStorage.getItem("email");
+if (email) {
+  displayProducts();
+}
 const categorySelect = document.querySelector(".categorySelect");
 if (categorySelect) {
   categorySelect.querySelectorAll("button").forEach((button) => {

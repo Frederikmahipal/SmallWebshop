@@ -1,9 +1,12 @@
 .button_container {
   display: flex;
+  justify-content: center;
   margin-top: 21px;
-  width: 333px;
-  max-width: 100%;
   gap: 11px;
+}
+
+.button_container .button {
+  min-width: 100px;
 }
 
 #cta {

@@ -70,9 +70,9 @@ function logout() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log(window.location.href);
   let email = sessionStorage.getItem("email");
-  if (!email) {
-    alert("access denied, please login");
+  if (!email && window.location.href.includes("shop")) {
     window.location.href = "login.html";
   }
 });
