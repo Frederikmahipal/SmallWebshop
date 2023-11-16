@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment</title>
+    <title>Checkout - Payment</title>
     <script src="/js/script.js" defer></script>
-    <script src="/js/index.js" defer></script>
+    <script src="/js/yourCart.js" defer></script>
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/payment.css" />
+    <link rel="stylesheet" href="/css/checkout.css" />
   </head>
 
   <body>
@@ -38,7 +38,104 @@
       </nav>
     </header>
     <main>
-      <section></section>
+      <section id="checkout">
+        <div class="checkout-grid">
+          <div>
+            <div class="title-grid">
+              <h1>Checkout</h1>
+              <div class="progress">
+                <p class="address-text">Address</p>
+                <hr class="progress-line" />
+                <h2 class="address-text">Payment</h2>
+              </div>
+            </div>
+            <div>
+              <h3>Payment Details</h3>
+              <form class="address">
+                <div class="form-group">
+                  <input
+                    aria-label="Cardholder Name"
+                    placeholder="Cardholder Name"
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    aria-label="Card Number"
+                    placeholder="Card Number"
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    required
+                  />
+                </div>
+                <div class="form-group4">
+                  <select aria-label="month" id="month" name="month">
+                    <option value="">Month</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                  </select>
+                  <select aria-label="year" id="year" name="year">
+                    <option value="">Year</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                  </select>
+                  <input
+                    aria-label="CVC"
+                    placeholder="CVC"
+                    type="text"
+                    id="CVC"
+                    name="CVC"
+                    required
+                  />
+                </div>
+                <div class="checkbox-group">
+                  <input type="checkbox" id="save-info" name="save-info" />
+                  <label for="save-info"
+                    >Save card data for future payments</label
+                  >
+                </div>
+                <button type="submit" onclick="checkout()" class="button">
+                  Pay with card
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="yourCart"></div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

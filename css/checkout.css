@@ -56,6 +56,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
 }
+.form-group4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
 .checkbox-group {
   display: flex;
   align-items: center;
