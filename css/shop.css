@@ -25,7 +25,7 @@
 .categorySelect {
     display: flex;
     gap: 1rem;
-
+    flex-wrap: wrap;
 }
 
 .categorySelect button {
@@ -46,4 +46,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+}
+
+@media (max-width: 749px) {
+    .categorySelect button {
+        padding: .5rem 1rem;
+    }
 }

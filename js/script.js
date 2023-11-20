@@ -1,12 +1,12 @@
 // Cart functions
 function updateCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const cartTotal = document.querySelector(".cartTotal");
+  const cartTotal = document.querySelectorAll(".cartTotal");
   if (!cartTotal) return;
   if (cart.length > 0) {
-    cartTotal.textContent = cart.reduce((total, product) => total + product.quantity, 0);
+    cartTotal.forEach((el) => (el.textContent = cart.reduce((total, product) => total + product.quantity, 0)));
   } else {
-    cartTotal.textContent = "";
+    cartTotal.forEach((el) => (el.textContent = ""));
   }
 }
 
@@ -76,24 +76,51 @@ payment?.addEventListener('submit', (e) => {
   window.location.href = '/'
 })
 
+const address = document.querySelector('#address')
+address?.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const contact = {
+    firstName: address?.firstName.value,
+    lastName: address?.lastName.value,
+    address: address?.address.value,
+    address2: address?.address2.value,
+    city: address?.city.value,
+    zipcode: address?.zipcode.value,
+    country: address?.country.value,
+  }
+  console.log(contact)
+  if (address?.saveInfo.checked) {
+    sessionStorage.setItem('contact', JSON.stringify(contact))
+  }
+  window.location.href = '/payment.html'
+})
+
 function logout() {
   sessionStorage.removeItem("email");
   location.reload();
 }
 
 const email = sessionStorage.getItem("email");
-const loginBtn = document.querySelector(".login");
-const logoutBtn = document.querySelector(".logout");
+const loginBtn = document.querySelectorAll(".login");
+const logoutBtn = document.querySelectorAll(".logout");
 if (email) {
-  loginBtn?.classList.add("hidden");
-  logoutBtn?.classList.remove("hidden");
-  logoutBtn?.addEventListener("click", () => {
-    logout();
-  });
+  loginBtn?.forEach((btn) => btn.classList.add("hidden"));
+  logoutBtn?.forEach((btn) => btn.classList.remove("hidden"));
+  logoutBtn?.forEach((btn) => btn.addEventListener("click", () => logout()));
 } else {
-  loginBtn?.classList.remove("hidden");
-  logoutBtn?.classList.add("hidden");
+  loginBtn?.forEach((btn) => btn.classList.remove("hidden"));
+  logoutBtn?.forEach((btn) => btn.classList.add("hidden"));
 }
 if (!email && window.location.href.includes("shop")) {
   window.location.href = "login.html";
 }
+
+document.querySelector(".menu-open")?.addEventListener("click", toggleMenu);
+document.querySelector(".menu-close")?.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+  document.querySelector(".mobile-menu")?.classList.toggle("hidden");
+  document.querySelector(".menu-open")?.classList.toggle("hidden");
+  document.querySelector(".menu-close")?.classList.toggle("hidden");
+}
+

@@ -31,7 +31,6 @@ async function displayProducts(category) {
             `;
 
     productElement.addEventListener("click", () => {
-      console.log(product);
       const modal = document.querySelector(".product-modal");
       modal.innerHTML = `
       <div class="modal-content">

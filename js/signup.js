@@ -47,7 +47,6 @@ document
           }),
         });
         let data = await response.json();
-        console.log(data);
       }
     } catch (error) {
       console.error(error);
