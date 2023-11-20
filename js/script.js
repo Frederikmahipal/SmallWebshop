@@ -60,9 +60,21 @@ async function getProductsByCategory(category) {
 }
 
 // User functions
-function checkout() {
-  localStorage.clear();
-}
+const payment = document.querySelector('#payment')
+payment?.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const card = {
+    name: payment?.cardname.value,
+    number: payment?.cardnumber.value,
+    expMonth: payment?.cardmonth.value,
+    expYear: payment?.cardyear.value,
+    cvc: payment?.cvc.value
+  }
+  if (payment?.saveInfo.checked) {
+    sessionStorage.setItem('card', JSON.stringify(card))
+  }
+  window.location.href = '/'
+})
 
 function logout() {
   sessionStorage.removeItem("email");

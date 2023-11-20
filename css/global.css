@@ -144,9 +144,8 @@ p {
 
 .product-modal .modal-content .modal-info .price-rating {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 }
 

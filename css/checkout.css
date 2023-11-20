@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-.address {
+.payment {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -38,8 +38,8 @@
   font-size: 2.25rem;
 }
 
-.address input,
-.address select {
+.payment input,
+.payment select {
   color: var(--primary);
   border: 0.5px solid #000;
   align-items: start;
@@ -49,8 +49,8 @@
   box-sizing: border-box;
 }
 
-.address input::placeholder,
-.address select::placeholder {
+.payment input::placeholder,
+.payment select::placeholder {
   color: var(--primary);
 }
 
