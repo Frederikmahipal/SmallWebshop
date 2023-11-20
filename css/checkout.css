@@ -23,6 +23,12 @@
   gap: 4rem;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
 .checkout-grid h3 {
   margin-bottom: 1rem;
 }
@@ -87,11 +93,11 @@
 }
 
 hr.progress-line {
-  width: 5rem; /* Set the length of the line */
-  height: 2px; /* Set the thickness of the line */
-  border: none; /* Remove default border */
-  background-color: black; /* Set the color of the line */
-  margin: 0 1rem; /* Center the line horizontally */
+  width: 5rem;
+  height: 2px;
+  border: none;
+  background-color: black;
+  margin: 0 1rem;
 }
 
 .progress {

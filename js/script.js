@@ -49,9 +49,21 @@ async function getAllProducts() {
   }
 }
 
+async function getSomeProducts() {
+  try {
+    const response = await fetch("https://fakestoreapi.com/products?limit=3");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
 async function getProductsByCategory(category) {
   try {
-    const response = await fetch(`https://fakestoreapi.com/products/category/${category}`);
+    const response = await fetch(
+      `https://fakestoreapi.com/products/category/${category}`
+    );
     const data = await response.json();
     return data;
   } catch (error) {
@@ -114,6 +126,49 @@ if (email) {
 if (!email && window.location.href.includes("shop")) {
   window.location.href = "login.html";
 }
+
+function validate() {
+  sessionStorage.removeItem("email");
+  location.reload();
+}
+
+document.querySelectorAll(".form").forEach(function (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Clear old error messages
+    const oldErrors = document.querySelectorAll(".error-message");
+    oldErrors.forEach(function (error) {
+      error.remove();
+    });
+
+    // Get all form controls
+    const fields = this.querySelectorAll("input, select");
+
+    let isValid = true;
+
+    // For each form control
+    fields.forEach(function (field) {
+      // If the field is not valid
+      if (!field.checkValidity()) {
+        isValid = false;
+
+        // Create a new div element for the error message
+        const errorMessage = document.createElement("div");
+        errorMessage.className = "error-message";
+        errorMessage.textContent = "Please fill out this field.";
+
+        // Append the error message to the form
+        field.parentElement.appendChild(errorMessage);
+      }
+    });
+
+    if (isValid) {
+      // Redirect to the URL specified in the data-redirect attribute
+      window.location.href = this.dataset.redirect;
+    }
+  });
+});
 
 document.querySelector(".menu-open")?.addEventListener("click", toggleMenu);
 document.querySelector(".menu-close")?.addEventListener("click", toggleMenu);

@@ -16,7 +16,6 @@
         <div class="menu-wrapper">
           <a href="/" class="logo">UrbanGem</a>
           <a href="/shop.html">Shop</a>
-          <a href="/about.html">About</a>
         </div>
         <div class="menu-wrapper">
           <a href="/cart.html" class="cart"
@@ -110,7 +109,12 @@
             </div>
             <div>
               <h3>Payment Details</h3>
-              <form id="payment" class="payment">
+              <form
+                id="payment"
+                class="payment form"
+                novalidate
+                data-redirect="/succes.html"
+              >
                 <div class="form-group">
                   <input
                     aria-label="Cardholder Name"
@@ -132,7 +136,7 @@
                   />
                 </div>
                 <div class="form-group4">
-                  <select aria-label="Month" id="cardmonth" name="ccmonth" >
+                  <select aria-label="Month" id="cardmonth" name="ccmonth">
                     <option value="" hidden>Month</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -184,11 +188,11 @@
                 </div>
                 <div class="checkbox-group">
                   <input type="checkbox" id="saveInfo" name="save-info" />
-                  <label for="save-info">Save card info for future payments</label>
+                  <label for="save-info"
+                    >Save card info for future payments</label
+                  >
                 </div>
-                <button type="submit" class="button">
-                  Pay with card
-                </button>
+                <button type="submit" class="button">Pay with card</button>
               </form>
             </div>
           </div>
