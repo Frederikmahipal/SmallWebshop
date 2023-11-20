@@ -113,7 +113,7 @@
                 id="payment"
                 class="payment form"
                 novalidate
-                data-redirect="/succes.html"
+                data-redirect="/success.html"
               >
                 <div class="form-group">
                   <input
@@ -136,7 +136,7 @@
                   />
                 </div>
                 <div class="form-group4">
-                  <select aria-label="Month" id="cardmonth" name="ccmonth">
+                  <select aria-label="Month" id="cardmonth" name="ccmonth" required >
                     <option value="" hidden>Month</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -151,7 +151,7 @@
                     <option value="11">11</option>
                     <option value="12">12</option>
                   </select>
-                  <select aria-label="year" id="cardyear" name="ccyear">
+                  <select aria-label="year" id="cardyear" name="ccyear" required>
                     <option value="" hidden>Year</option>
                     <option value="2010">2010</option>
                     <option value="2011">2011</option>
@@ -192,7 +192,7 @@
                     >Save card info for future payments</label
                   >
                 </div>
-                <button type="submit" class="button">Pay with card</button>
+                <button class="button">Pay with card</button>
               </form>
             </div>
           </div>

@@ -85,7 +85,7 @@ payment?.addEventListener('submit', (e) => {
   if (payment?.saveInfo.checked) {
     sessionStorage.setItem('card', JSON.stringify(card))
   }
-  window.location.href = '/'
+  localStorage.removeItem('cart')
 })
 
 const address = document.querySelector('#address')
@@ -104,7 +104,6 @@ address?.addEventListener('submit', (e) => {
   if (address?.saveInfo.checked) {
     sessionStorage.setItem('contact', JSON.stringify(contact))
   }
-  window.location.href = '/payment.html'
 })
 
 function logout() {

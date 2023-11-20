@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout - Address</title>
+    <title>Checkout - Succes</title>
     <script src="/js/script.js" defer></script>
-    <script src="/js/yourCart.js" defer></script>
+    <script src="/js/products3.js" defer></script>
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/checkout.css" />
+    <link rel="stylesheet" href="/css/succes.css" />
+    <link rel="stylesheet" href="/css/shop.css" />
   </head>
 
   <body>
@@ -53,7 +54,12 @@
             xmlns="http://www.w3.org/2000/svg"
             class="menu-close hidden"
           >
-            <rect y="16.4247" width="23" height="2" transform="rotate(-45 0 16.4247)" />
+            <rect
+              y="16.4247"
+              width="23"
+              height="2"
+              transform="rotate(-45 0 16.4247)"
+            />
             <rect
               x="1.41431"
               y="0.161133"
@@ -91,94 +97,17 @@
       </nav>
     </header>
     <main>
-      <section id="checkout">
-        <div class="checkout-grid">
-          <div>
-            <div class="title-grid">
-              <h1>Checkout</h1>
-              <div class="progress">
-                <h2 class="address-text">Address</h2>
-                <hr class="progress-line" />
-                <p class="address-text">Payment</p>
-              </div>
-            </div>
-            <div>
-              <h3>Shipping Information</h3>
-              <form id="address" class="address form" novalidate data-redirect="/payment.html">
-                <div class="form-group">
-                  <input
-                    aria-label="First Name"
-                    placeholder="First Name"
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    aria-label="Last Name"
-                    placeholder="Last Name"
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    aria-label="Address"
-                    placeholder="Address"
-                    type="text"
-                    id="address"
-                    name="address"
-                    required
-                  />
-                </div>
-                <div class="form-group3">
-                  <input
-                    aria-label="Apartment, suite, etc."
-                    placeholder="Apartment, suite, etc."
-                    type="text"
-                    id="address2"
-                    name="address2"
-                  />
-                  <input
-                    aria-label="City"
-                    placeholder="City"
-                    type="text"
-                    id="city"
-                    name="city"
-                    required
-                  />
-                </div>
-                <div class="form-group3">
-                  <input
-                    aria-label="Zipcode"
-                    placeholder="Zipcode"
-                    type="text"
-                    id="zipcode"
-                    name="zipcode"
-                    required
-                  />
-                  <select aria-label="country" id="country" name="country" required>
-                    <option value="">Country</option>
-                    <option value="us">United States</option>
-                    <option value="ca">Canada</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="dk">Denmark</option>
-                    <option value="se">Sweden</option>
-                  </select>
-                </div>
-                <div class="checkbox-group">
-                  <input type="checkbox" id="saveInfo" name="saveInfo" />
-                  <label for="saveInfo">Save contact information</label>
-                </div>
-                <button class="button">Continue to Payment</button>
-              </form>
-            </div>
-          </div>
-          <div id="yourCart"></div>
+      <section id="success-section">
+        <div class="title-grid">
+          <h1 id="title">Gemtastic! Your order was succesfull!</h1>
+          <a href="shop.html" class="button"> Go to shop</a>
+        </div>
+      </section>
+      <section id="products">
+        <div class="products-content">
+          <h2>Check our bestsellers</h2>
+          <div class="product-grid"></div>
+          <div class="product-modal"></div>
         </div>
       </section>
     </main>
