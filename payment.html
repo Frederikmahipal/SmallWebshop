@@ -50,14 +50,19 @@
             </div>
             <div>
               <h3>Payment Details</h3>
-              <form class="form" novalidate data-redirect="/succes.html">
+              <form
+                id="payment"
+                class="payment form"
+                novalidate
+                data-redirect="/succes.html"
+              >
                 <div class="form-group">
                   <input
                     aria-label="Cardholder Name"
                     placeholder="Cardholder Name"
                     type="text"
-                    id="first-name"
-                    name="first-name"
+                    id="cardname"
+                    name="ccname"
                     required
                   />
                 </div>
@@ -66,29 +71,29 @@
                     aria-label="Card Number"
                     placeholder="Card Number"
                     type="text"
-                    id="last-name"
-                    name="last-name"
+                    id="cardnumber"
+                    name="cardnumber"
                     required
                   />
                 </div>
                 <div class="form-group4">
-                  <select aria-label="month" id="month" name="month">
-                    <option value="">Month</option>
-                    <option value="january">January</option>
-                    <option value="february">February</option>
-                    <option value="march">March</option>
-                    <option value="april">April</option>
-                    <option value="may">May</option>
-                    <option value="june">June</option>
-                    <option value="july">July</option>
-                    <option value="august">August</option>
-                    <option value="september">September</option>
-                    <option value="october">October</option>
-                    <option value="november">November</option>
-                    <option value="december">December</option>
+                  <select aria-label="Month" id="cardmonth" name="ccmonth">
+                    <option value="" hidden>Month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
                   </select>
-                  <select aria-label="year" id="year" name="year">
-                    <option value="">Year</option>
+                  <select aria-label="year" id="cardyear" name="ccyear">
+                    <option value="" hidden>Year</option>
                     <option value="2010">2010</option>
                     <option value="2011">2011</option>
                     <option value="2012">2012</option>
@@ -115,22 +120,20 @@
                     aria-label="CVC"
                     placeholder="CVC"
                     type="text"
-                    id="CVC"
-                    name="CVC"
+                    id="cvc"
+                    name="cvc"
                     pattern="\d{3}"
                     title="CVC should be 3  digits long."
                     required
                   />
                 </div>
                 <div class="checkbox-group">
-                  <input type="checkbox" id="save-info" name="save-info" />
+                  <input type="checkbox" id="saveInfo" name="save-info" />
                   <label for="save-info"
-                    >Save card data for future payments</label
+                    >Save card info for future payments</label
                   >
                 </div>
-                <button type="submit" onclick="checkout()" class="button">
-                  Pay with card
-                </button>
+                <button type="submit" class="button">Pay with card</button>
               </form>
             </div>
           </div>
