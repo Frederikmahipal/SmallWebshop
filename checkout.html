@@ -16,7 +16,6 @@
         <div class="menu-wrapper">
           <a href="/" class="logo">UrbanGem</a>
           <a href="/shop.html">Shop</a>
-          <a href="/about.html">About</a>
         </div>
         <div class="menu-wrapper">
           <a href="/cart.html" class="cart"
@@ -51,7 +50,7 @@
             </div>
             <div>
               <h3>Shipping Information</h3>
-              <form class="address">
+              <form class="form" data-redirect="/payment.html" novalidate>
                 <div class="form-group">
                   <input
                     aria-label="First Name"
@@ -108,7 +107,12 @@
                     name="zipcode"
                     required
                   />
-                  <select aria-label="country" id="country" name="country">
+                  <select
+                    aria-label="country"
+                    id="country"
+                    name="country"
+                    required
+                  >
                     <option value="">Country</option>
                     <option value="us">United States</option>
                     <option value="ca">Canada</option>
@@ -121,7 +125,7 @@
                   <input type="checkbox" id="save-info" name="save-info" />
                   <label for="save-info">Save contact information</label>
                 </div>
-                <a href="/payment.html" class="button"> Continue to Payment </a>
+                <button type="submit" class="button">Pay with card</button>
               </form>
             </div>
           </div>

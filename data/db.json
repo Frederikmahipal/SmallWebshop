@@ -14,8 +14,8 @@
     },
     {
       "email": "lasse@lasse.dk",
-      "password": "ABc12345!",
-      "confirmPassword": "ABc12345!",
+      "password": "123",
+      "confirmPassword": "123",
       "id": 3
     }
   ]

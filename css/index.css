@@ -43,6 +43,7 @@ main {
 }
 
 #pictures {
+  z-index: 1;
   padding: 6rem 2rem 2rem 2rem;
   display: flex;
   align-items: center;
