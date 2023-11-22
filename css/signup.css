@@ -1,5 +1,5 @@
 main {
-  padding: 4rem 1rem;
+  margin: 4rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -22,7 +22,8 @@ main {
 }
 @media (max-width: 768px) {
   .signupsection {
-    width: 80%;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 

@@ -52,6 +52,9 @@
 .cart-content a {
   text-decoration: underline;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .cart-item .product-info h2,

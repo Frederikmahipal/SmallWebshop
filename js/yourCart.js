@@ -33,14 +33,9 @@ function renderCart() {
                 <div class="product-info">
                     <h2>${product.title}</h2>
                     <p>Quantity: ${product.quantity}</p>
-                    <span class="removeButton">Remove</span>
                     </div>
                     <p class="price">$${product.price}</p>
             `;
-    productElement.querySelector(".removeButton").addEventListener("click", () => {
-      removeFromCart(product);
-      loadCart();
-    });
     cartItems.appendChild(productElement);
   });
 

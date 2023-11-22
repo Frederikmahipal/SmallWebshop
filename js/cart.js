@@ -11,7 +11,7 @@ function loadCart() {
                   
                     <h2>${product.title}</h2>
                     <p>Quantity: ${product.quantity}</p>
-                    <span class="removeButton">Remove</span>
+                    <button class="removeButton" tabindex="0">Remove</button>
                     </div>
                     <p class="price">$${product.price}</p>
             `;

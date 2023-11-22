@@ -172,6 +172,23 @@ document.querySelectorAll(".form").forEach(function (form) {
 document.querySelector(".menu-open")?.addEventListener("click", toggleMenu);
 document.querySelector(".menu-close")?.addEventListener("click", toggleMenu);
 
+// Toggle the menu with enter or space when focused
+document.querySelector(".menu-open")?.addEventListener("keydown", function (event) {
+  if (event.code === "Enter" || event.code === "Space") {
+    event.preventDefault();
+    toggleMenu();
+    document.querySelector(".menu-close")?.focus();
+  }
+});
+
+document.querySelector(".menu-close")?.addEventListener("keydown", function (event) {
+  if (event.code === "Enter" || event.code === "Space") {
+    event.preventDefault();
+    toggleMenu();
+    document.querySelector(".menu-open")?.focus();
+  }
+});
+
 function toggleMenu() {
   document.querySelector(".mobile-menu")?.classList.toggle("hidden");
   document.querySelector(".menu-open")?.classList.toggle("hidden");

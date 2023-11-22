@@ -20,6 +20,7 @@ async function displayProducts(category) {
   products.forEach((product) => {
     const productElement = document.createElement("div");
     productElement.classList.add("product-card");
+    productElement.tabIndex = 0;
     productElement.innerHTML = `
                 <div class="product-img"><img src="${product.image}" alt="${product.title}"/></div>
                 <div class="product-info">
@@ -30,7 +31,21 @@ async function displayProducts(category) {
                 </div>
             `;
 
+    productElement.addEventListener("keydown", (event) => {
+      // Check if 'Enter' or 'Space' key is pressed
+      if (event.code === "Enter" || event.code === "Space") {
+        // Prevent default behavior to stop triggering a click event
+        event.preventDefault();
+        // Open the modal
+        openProductModal(product);
+      }
+    });
+
     productElement.addEventListener("click", () => {
+      openProductModal(product);
+    });
+
+    function openProductModal(product) {
       const modal = document.querySelector(".product-modal");
       modal.innerHTML = `
       <div class="modal-content">
@@ -70,8 +85,11 @@ async function displayProducts(category) {
       });
       modal.querySelector(".close-button").addEventListener("click", () => {
         modal.removeAttribute("open");
+        productElement.focus();
       });
-    });
+
+      modal.querySelector(".close-button").focus();
+    }
 
     productGrid.appendChild(productElement);
   });
