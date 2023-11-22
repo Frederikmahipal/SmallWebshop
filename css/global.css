@@ -8,10 +8,11 @@
   --background: #fdfcfc;
   --grey: #ccc;
   --white: #fff;
+  --font: "Public Sans", sans-serif
 }
 
 body {
-  font-family: "Public Sans", sans-serif;
+  font-family: var(--font);
   background-color: var(--background);
   color: var(--primary);
   margin: 0;
