@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --primary: #1a1215;
   --secondary: #f5f5f5;
   --accent: #a54e70;
   --accent-light: #d192ad;
-  --background: #FDFCFC;
+  --background: #fdfcfc;
   --grey: #ccc;
   --white: #fff;
 }
 
 body {
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   background-color: var(--background);
   color: var(--primary);
   margin: 0;
@@ -232,11 +232,12 @@ p {
 }
 
 .button_add-to-cart {
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   width: 100%;
 }
 
-.button:hover, .button_secondary:hover {
+.button:hover,
+.button_secondary:hover {
   background-color: var(--accent-light);
   border: 2px solid transparent;
   color: var(--white);
@@ -293,7 +294,7 @@ p {
 .cart-item .product-img {
   width: 4rem;
   height: 4rem;
-  padding: .5rem;  
+  padding: 0.5rem;
   background-color: var(--white);
 }
 
@@ -308,20 +309,22 @@ p {
   align-items: start;
   flex: 1;
   justify-content: space-between;
-  font-size: .75rem;
-  gap: 0.5rem
+  font-size: 0.75rem;
+  gap: 0.5rem;
 }
 
 .removeButton {
   user-select: none;
 }
 
-.cart-item .product-info .removeButton, .cart-content a {
-    text-decoration: underline;
-    cursor: pointer;
+.cart-item .product-info .removeButton,
+.cart-content a {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.cart-item .product-info h2, .cart-item .price {
+.cart-item .product-info h2,
+.cart-item .price {
   font-size: 1.25rem;
   font-weight: 900;
 }
@@ -362,7 +365,8 @@ footer {
   gap: 5rem;
 }
 
-footer h3, footer h4 {
+footer h3,
+footer h4 {
   font-weight: 900;
   color: var(--accent);
 }
@@ -378,10 +382,11 @@ footer #newsletter {
   display: flex;
 }
 
-footer #newsletter input, footer #newsletter button {
+footer #newsletter input,
+footer #newsletter button {
   background: none;
   border: 1px solid var(--primary);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 footer #newsletter input {
@@ -399,13 +404,15 @@ footer #newsletter button {
 footer .footer-menus {
   display: flex;
   gap: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 footer .footer-menu {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-
+  gap: 0.5rem;
+  min-width: max-content;
 }
 
 footer .footer-menu h4 {
@@ -424,7 +431,7 @@ footer .footer-menu h4 {
     display: flex;
   }
   .button {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
   .product-modal {
     overflow-y: auto;
@@ -441,5 +448,18 @@ footer .footer-menu h4 {
   .product-modal .modal-content .modal-img {
     width: 50%;
     justify-self: center;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  footer .footer-menus {
+    max-width: 400px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  footer .footer-menu {
+    min-width: 0;
   }
 }
