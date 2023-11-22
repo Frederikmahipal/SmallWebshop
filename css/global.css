@@ -50,7 +50,7 @@ nav.mobile {
 .mobile-menu {
   position: fixed;
   inset: 0;
-  top: 61px;
+  top: 60px;
   padding: 2rem;
   justify-content: space-between;
   display: flex;
@@ -58,6 +58,7 @@ nav.mobile {
   background: var(--background);
   align-items: start;
   color: var(--primary);
+  border-top: 1px solid var(--grey);
 }
 
 .menu-wrapper {
