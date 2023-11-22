@@ -35,6 +35,7 @@
     font-weight: 900;
     font-size: .75rem;
     cursor: pointer;
+    min-width: max-content;
 }
 
 .categorySelect button.active {
@@ -51,5 +52,24 @@
 @media (max-width: 749px) {
     .categorySelect button {
         padding: .5rem 1rem;
+    }
+    .categorySelect {
+        flex-wrap: nowrap;
+        overflow: auto;
+        padding: 0 1rem;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .categorySelect::-webkit-scrollbar {
+        display: none;
+    }
+    #products {
+        padding: 2rem 0;
+    }
+    .product-grid {
+        padding: 0 1rem;
+    }
+    .products-content {
+        gap: 2rem;
     }
 }
