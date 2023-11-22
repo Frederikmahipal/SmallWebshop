@@ -12,8 +12,8 @@ main {
   gap: 1rem;
 }
 .signupsection {
-  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--colors-grey-white, var(--white));
+  box-shadow: var(--shadow);
+  background-color: var(--white);
   width: 33%;
   padding: 37px 28px 28px 29px;
   display: flex;
@@ -29,26 +29,30 @@ main {
 
 .signupsection h1 {
   color: var(--accent);
-  font: 600 22px/30px Inter, Helvetica, sans-serif;
+  font-weight: 600 ;
+  font-size: 22px;
 }
 
 .signupsection .signuptext {
-  color: var(--colors-grey-grey-2, var(--primary));
-  font: 500 16px/26px Inter, Helvetica, sans-serif;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .signupsection input {
-  color: var(--colors-grey-grey-2, var(--primary));
+  color: var(--primary);
   border: 0.5px solid var(--primary);
   align-items: start;
   padding: 15px 16px;
-  font: 400 16px Inter, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .termstxt {
-  color: var(--Secondary, var(--primary));
+  color: var(--primary);
   margin-top: 0.5rem;
-  font: 300 10px Inter, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 10px;
 }
 
 .createbutton {
@@ -56,12 +60,14 @@ main {
   align-self: center;
   margin-top: 31px;
   white-space: nowrap;
-  font: 500 14px/21px Inter, Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .loginsection {
   color: var(--accent);
   align-self: center;
   white-space: nowrap;
-  font: 500 21px Inter, Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 21px;
 }
