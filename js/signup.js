@@ -1,13 +1,13 @@
 document
-  .getElementById("signupForm")
+  .querySelector("#signupForm")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("confirmPassword").value;
-    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    var passwordRegex =
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
 
     if (!emailRegex.test(email)) {
@@ -35,7 +35,7 @@ document
         alert("Email already exists");
         return;
       } else {
-        let response = await fetch("http://localhost:3000/users", {
+        await fetch("http://localhost:3000/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -46,7 +46,7 @@ document
             confirmPassword: confirmPassword,
           }),
         });
-        let data = await response.json();
+        window.location.href = "/login.html";
       }
     } catch (error) {
       console.error(error);
