@@ -17,6 +17,12 @@
       "password": "123",
       "confirmPassword": "123",
       "id": 3
+    },
+    {
+      "email": "magndut@gmail.com",
+      "password": "62QKCq8F2z6RsCu!",
+      "confirmPassword": "62QKCq8F2z6RsCu!",
+      "id": 4
     }
   ]
 }

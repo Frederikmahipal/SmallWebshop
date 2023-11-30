@@ -156,6 +156,7 @@ p {
   background: var(--background);
   z-index: 1;
   display: none;
+  overflow-y: auto;
   padding-top: 60px;
 }
 
@@ -440,9 +441,6 @@ footer .footer-menu .menu-title {
   }
   .button {
     padding: 0.5rem 1rem;
-  }
-  .product-modal {
-    overflow-y: auto;
   }
   .product-modal .modal-content {
     grid-template-columns: 1fr;
